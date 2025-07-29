@@ -1,6 +1,7 @@
 # Dependencies
 /node_modules
-
+# Ignore user-uploaded content
+/public/images
 # Environment variables
 .env
 
