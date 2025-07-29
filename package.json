@@ -1,0 +1,32 @@
+{
+  "name": "social-media-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  "start:api": "cross-env JWT_SECRET=\"aVeryStrongAndRandomSecretKeyThatIsHardToGuess123!@#\" MONGO_URI=\"mongodb+srv://chaudharikevin8:Kevin%402003@cluster0.1b5kowb.mongodb.net/socialAppDB?retryWrites=true&w=majority&appName=Cluster0\" nodemon server.js",
+  "start:socket": "cross-env JWT_SECRET=\"aVeryStrongAndRandomSecretKeyThatIsHardToGuess123!@#\" MONGO_URI=\"mongodb+srv://chaudharikevin8:Kevin%402003@cluster0.1b5kowb.mongodb.net/socialAppDB?retryWrites=true&w=majority&appName=Cluster0\" nodemon socket.js",
+  "start": "concurrently \"npm run start:api\" \"npm run start:socket\""
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.16.4",
+    "morgan": "^1.10.1",
+    "multer": "^2.0.2",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0",
+    "cross-env": "^10.0.0",
+    "nodemon": "^3.1.10"
+  }
+}
